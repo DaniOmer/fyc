@@ -63,10 +63,29 @@ Listez les étapes à suivre (minimum 5-6 instructions) :
 
 
 ═══════════════════════════════════════════════════════════════════
-EXEMPLE (Few-Shot Learning)
+SCHÉMA DE SORTIE
 ═══════════════════════════════════════════════════════════════════
 
 [À COMPLÉTER]
+
+Décrivez précisément le format de la sortie JSON :
+1. La sortie doit être un tableau JSON (`[]`) de membres du comité exécutif.
+2. Chaque élément du tableau doit être un objet JSON représentant une personne.
+3. Chaque objet doit contenir exactement les champs suivants :
+   - "nom"
+   - "prenom"
+   - "age"
+   - "genre"
+   - "role"
+   - "nationalite"
+   - "adresse_professionnelle"
+4. Les champs dont l’information est absente doivent être renseignés avec `null`.
+5. Aucun texte explicatif ne doit être renvoyé, uniquement le JSON valide.
+6. Assurez-vous que le JSON final soit bien formé et directement parseable.
+
+═══════════════════════════════════════════════════════════════════
+EXEMPLE (Few-Shot Learning)
+═══════════════════════════════════════════════════════════════════
 
 Fournissez un exemple complet :
 
