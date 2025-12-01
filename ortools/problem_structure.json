@@ -1,0 +1,91 @@
+{
+  "problem_name": "Emploi du temps des enseignants",
+  "teachers": [
+    {
+      "name": "Alice Martin",
+      "subject": "Mathématiques",
+      "hours_per_week": 6,
+      "available_days": [
+        "Lundi",
+        "Mercredi",
+        "Vendredi"
+      ]
+    },
+    {
+      "name": "Bob Dupont",
+      "subject": "Physique",
+      "hours_per_week": 4,
+      "available_days": [
+        "Mardi",
+        "Jeudi"
+      ]
+    },
+    {
+      "name": "Claire Leroy",
+      "subject": "Français",
+      "hours_per_week": 5,
+      "available_days": [
+        "Lundi",
+        "Mardi",
+        "Jeudi"
+      ]
+    },
+    {
+      "name": "David Petit",
+      "subject": "Histoire",
+      "hours_per_week": 3,
+      "available_days": [
+        "Mercredi",
+        "Vendredi"
+      ]
+    },
+    {
+      "name": "Emma Dubois",
+      "subject": "Anglais",
+      "hours_per_week": 5,
+      "available_days": [
+        "Lundi",
+        "Mercredi",
+        "Jeudi"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "x[i,j,k]",
+      "description": "1 si l'enseignant i enseigne le jour j pendant la période k, 0 sinon",
+      "type": "binary"
+    }
+  ],
+  "constraints": [
+    {
+      "id": 1,
+      "description": "Chaque enseignant ne peut donner qu’une seule matière par jour.",
+      "type": "hard"
+    },
+    {
+      "id": 2,
+      "description": "Chaque matière doit atteindre le nombre total d’heures assigné.",
+      "type": "hard"
+    },
+    {
+      "id": 3,
+      "description": "Les créneaux horaires sont divisés en demi-journées (matin / après-midi).",
+      "type": "hard"
+    },
+    {
+      "id": 4,
+      "description": "Chaque créneau (matin ou après-midi) dure 2 heures.",
+      "type": "hard"
+    },
+    {
+      "id": 5,
+      "description": "Respecter les préférences de jours si possible.",
+      "type": "soft"
+    }
+  ],
+  "objective": {
+    "description": "Maximiser l'utilisation des heures d'enseignement tout en respectant les disponibilités des enseignants.",
+    "type": "maximize"
+  }
+}
