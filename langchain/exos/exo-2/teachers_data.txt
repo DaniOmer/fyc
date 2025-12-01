@@ -1,0 +1,17 @@
+L’école “Le Campus” doit planifier l’emploi du temps de 5 enseignants pour 5 matières différentes sur une semaine de 5 jours 
+(lundi à vendredi). Chaque enseignant a une disponibilité spécifique et chaque matière a un nombre d’heures à répartir. 
+L’objectif est de générer un JSON structuré qui servira à la modélisation d’un problème d’optimisation (planning contraint).
+
+| Enseignant   | Matière       | Heures par semaine | Disponibilités (jours)    |
+| ------------ | ------------- | ------------------ | ------------------------- |
+| Alice Martin | Mathématiques | 6                  | Lundi, Mercredi, Vendredi |
+| Bob Dupont   | Physique      | 4                  | Mardi, Jeudi              |
+| Claire Leroy | Français      | 5                  | Lundi, Mardi, Jeudi       |
+| David Petit  | Histoire      | 3                  | Mercredi, Vendredi        |
+| Emma Dubois  | Anglais       | 5                  | Lundi, Mercredi, Jeudi    |
+
+Contraintes :
+- Chaque enseignant ne peut donner qu’une seule matière par jour.
+- Chaque matière doit atteindre le nombre total d’heures assigné.
+- Les créneaux horaires sont divisés en demi-journées (matin / après-midi).
+- Chaque créneau (matin ou après-midi) dure 2 heures
